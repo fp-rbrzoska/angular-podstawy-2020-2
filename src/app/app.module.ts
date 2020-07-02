@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { MyTestComponent } from './my-test/my-test.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ErrorComponent } from './error/error.component';
+import { MyTestChildComponent } from './my-test-child/my-test-child.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ErrorComponent } from './error/error.component';
     HomeComponent,
     MyTestComponent,
     NavigationComponent,
-    ErrorComponent
+    ErrorComponent,
+    MyTestChildComponent
   ],
   imports: [
     BrowserModule,

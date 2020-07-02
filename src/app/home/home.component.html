@@ -3,4 +3,7 @@
   {{ myNumbr | currency: 'EUR' }}
   {{ formatCurrency(myNumbr) }}
 </h1>
-<p>home works!</p>
+<button class="btn btn-secondary" (click)="handleClick()">Refresh</button>
+<input type="text" #myInput>
+
+<pre>{{ myInput.value }}</pre>

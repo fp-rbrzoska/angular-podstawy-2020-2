@@ -1,1 +1,2 @@
-<p>my-test works!</p>
+<p class="alert">{{ counter }}</p>
+<fp-my-test-child [counter]="initialCounterValue" (counterClick)="updateCounter($event)"></fp-my-test-child>
