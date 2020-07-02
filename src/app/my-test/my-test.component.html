@@ -1,2 +1,22 @@
-<p class="alert">{{ counter }}</p>
+<p class="alert " [ngClass]="{'alert-primary': counter < 20, 'alert-warning': counter >= 20}">{{ counter }}</p>
+
+<ng-container *ngIf="counter > 25; else ok">
+<div class="alert-danger" >Uwaga za duża liczba</div>
+<img src="http://onet.pl">
+</ng-container>
+
 <fp-my-test-child [counter]="initialCounterValue" (counterClick)="updateCounter($event)"></fp-my-test-child>
+
+<table class="table">
+  <tbody>
+    <tr *ngFor="let user of testUsers">
+      <td>{{user.name}}</td>
+      <td>{{user.age}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #ok>
+
+<div class="alert-secondary" >Liczba jest ok</div>
+</ng-template>

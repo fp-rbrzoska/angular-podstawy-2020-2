@@ -8,6 +8,8 @@ import { MyTestComponent } from './my-test/my-test.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ErrorComponent } from './error/error.component';
 import { MyTestChildComponent } from './my-test-child/my-test-child.component';
+import { TestService } from  './test.service';
+import { ObservablesComponent } from './observables/observables.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,14 @@ import { MyTestChildComponent } from './my-test-child/my-test-child.component';
     MyTestComponent,
     NavigationComponent,
     ErrorComponent,
-    MyTestChildComponent
+    MyTestChildComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
