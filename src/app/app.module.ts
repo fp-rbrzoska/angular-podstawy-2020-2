@@ -4,28 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { MyTestComponent } from './my-test/my-test.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ErrorComponent } from './error/error.component';
-import { MyTestChildComponent } from './my-test-child/my-test-child.component';
-import { TestService } from  './test.service';
-import { ObservablesComponent } from './observables/observables.component';
+import { CoreModule } from  './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MyTestComponent,
     NavigationComponent,
-    ErrorComponent,
-    MyTestChildComponent,
-    ObservablesComponent
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
-  providers: [TestService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

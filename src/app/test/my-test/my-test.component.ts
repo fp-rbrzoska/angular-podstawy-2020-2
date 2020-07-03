@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from  '../models/User'
-import { TestService } from '../test.service';
+import { User } from  '../../models/User'
+import { UserService } from '../../core/user.service';
 
 @Component({
   selector: 'fp-my-test',
@@ -13,8 +13,8 @@ export class MyTestComponent implements OnInit {
   initialCounterValue = 10;
   counter;
 
-  constructor(private testService: TestService) {
-    this.testUsers = this.testService.getAllUsers();
+  constructor(private userService: UserService) {
+    this.testUsers = this.userService.getAllUsers();
   }
 
   ngOnInit(): void {
