@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/User';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class UserService {
@@ -9,14 +10,15 @@ export class UserService {
     { name: 'Tomasz', age: 45 }
   ];
 
-  constructor() {
-    // setInterval(()=> {
-    //   this.testUsers[1].age++;
-    //   console.log(this.testUsers)
-    // }, 3000)
+  constructor(private http: HttpClient) {
+
   }
 
   getAllUsers() {
     return this.testUsers;
+  }
+
+  getConfig() {
+    return this.http.get<any>('http://localhost:3000/config')
   }
 }

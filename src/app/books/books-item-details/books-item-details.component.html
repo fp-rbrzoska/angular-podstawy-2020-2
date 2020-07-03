@@ -1,0 +1,12 @@
+<div>
+  <button class="btn btn-primary" routerLink="../">Back</button>
+</div>
+<ng-container *ngIf="book$ | async as book">
+  <div class="card m-5 h-100">
+    <img class="card-img-top mh-300" [src]="book.thumbnailUrl" alt="">
+    <div class="card-body">
+      <h4 class="card-title">{{book.title}}</h4>
+      <p class="card-text">{{book.longDescription}}</p>
+    </div>
+  </div>
+</ng-container>

@@ -7,6 +7,7 @@ import { ErrorComponent } from './error/error.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'test', loadChildren: () => import('./test/test.module').then(m => m.TestModule) },
+  { path: 'books', loadChildren: () => import('./books/books.module').then(m => m.BooksModule) },
   { path: '**', component: ErrorComponent }
 ];
 

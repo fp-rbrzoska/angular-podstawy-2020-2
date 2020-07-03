@@ -1,0 +1,20 @@
+.book-card {
+  max-width: 200px;
+  height: 400px;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid darkgoldenrod;
+  }
+
+  .card-body {
+    overflow: hidden;
+    display: block;
+  }
+}
+
+:host {
+  display: inline-block;
+  max-width: 200px;
+  height: auto;
+  margin: 20px;
+}

@@ -1,8 +1,24 @@
 <p class="alert " [ngClass]="{'alert-primary': counter < 20, 'alert-warning': counter >= 20}">{{ counter }}</p>
 
+<div class="card m-5 p-3 shadow">
+  <div class="card-body" *ngIf="config$ | async as config; else loading">
+    <code>{{ config | json }}</code>
+    <code>{{ config | json }}</code>
+    <code>{{ config | json }}</code>
+    <code>{{ config | json }}</code>
+    <code>{{ config | json }}</code>
+  </div>
+  <ng-template #loading>
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </ng-template>
+</div>
+
+
 <ng-container *ngIf="counter > 25; else ok">
 <div class="alert-danger" >Uwaga za duża liczba</div>
-<img src="http://onet.pl">
+<div>some data</div>
 </ng-container>
 
 <fp-my-test-child [counter]="initialCounterValue" (counterClick)="updateCounter($event)"></fp-my-test-child>
